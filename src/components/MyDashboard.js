@@ -43,18 +43,20 @@ const MyDashboard = () => {
                       <div className="w-[170px]">
                         Duration: {course.content_info_short}
                       </div>
-                      <button
-                        className={`border-2 p-2 rounded-lg ml-[150px] ${
-                          completedCourses[course.id]
-                            ? "bg-green-500 text-white"
-                            : ""
-                        }`}
-                        onClick={() => handleButtonClick(course.id)}
-                      >
-                        {completedCourses[course.id]
-                          ? "Completed"
-                          : "Mark as Complete"}
-                      </button>
+                      <div className="ml-[10px]">
+                        <button
+                          className={`border-2 p-2 rounded-lg ml-[150px] ${
+                            completedCourses[course.id]
+                              ? "bg-green-500 text-white"
+                              : ""
+                          }`}
+                          onClick={() => handleButtonClick(course.id)}
+                        >
+                          {completedCourses[course.id]
+                            ? "Completed"
+                            : "Mark as Complete"}
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
